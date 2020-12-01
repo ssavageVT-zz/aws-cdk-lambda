@@ -5,6 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+       # Runs a set of commands using the runners shell
+      - name: Gather Facts - Present Dir and Contents
+        run: |
+          pwd
+          ls -la
+
       - name: cdk diff 
         uses: youyo/aws-cdk-github-actions@v1
         with:
