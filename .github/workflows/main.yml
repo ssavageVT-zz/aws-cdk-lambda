@@ -10,6 +10,8 @@ jobs:
         run: |
           pwd
           ls -la
+      - name: Checkout
+        uses: actions/checkout@v2
 
       - name: cdk diff 
         uses: youyo/aws-cdk-github-actions@v1
