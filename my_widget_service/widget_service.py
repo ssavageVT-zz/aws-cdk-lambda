@@ -37,9 +37,9 @@ class WidgetService(core.Construct):
         get_widget_integration = apigateway.LambdaIntegration(handler)
 
         # Remove a specific widget from the bucket with: DELETE /{id}
-        #delete_widget_integration = apigateway.LambdaIntegration(handler)
+        delete_widget_integration = apigateway.LambdaIntegration(handler)
 
         widget.add_method("POST", post_widget_integration);     # POST /{id}
         widget.add_method("GET", get_widget_integration);       # GET /{id}
-        #widget.add_method("DELETE", delete_widget_integration); # DELETE /{id}
+        widget.add_method("DELETE", delete_widget_integration); # DELETE /{id}
 
