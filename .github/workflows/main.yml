@@ -9,6 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      # Checkout code
       - name: cdk bootstrap
         uses: youyo/aws-cdk-github-actions@v1
         with:
