@@ -1,0 +1,55 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:*",
+                "lambda:*",
+                "iam:CreateRole",
+                "iam:AttachRolePolicy",
+                "iam:PutRolePolicy",
+                "iam:PassRole",
+                "iam:DetachRolePolicy",
+                "iam:DeleteRolePolicy",
+                "iam:GetRole",
+                "iam:DeleteRole",
+                "cloudformation:UpdateTerminationProtection",
+                "cloudformation:CreateChangeSet",
+                "cloudformation:DeleteChangeSet",
+                "cloudformation:DescribeStackEvents",
+                "cloudformation:DescribeChangeSet",
+                "cloudformation:ExecuteChangeSet",
+                "cloudformation:GetTemplate",
+                "cloudformation:DeleteStack",
+                "cloudformation:DescribeStacks",
+                "kms:Encrypt",
+                "kms:Decrypt",
+                "kms:ReEncryptTo",
+                "kms:DescribeKey",
+                "kms:GenerateDataKey",
+                "kms:ReEncryptFrom",
+                "s3:GetAccessPoint",
+                "s3:PutStorageLensConfiguration",
+                "s3:CreateBucket",
+                "s3:PutAccountPublicAccessBlock",
+                "s3:ListAccessPoints",
+                "s3:ListJobs",
+                "s3:ListStorageLensConfigurations",
+                "s3:GetObject",
+                "s3:GetAccountPublicAccessBlock",
+                "s3:ListAllMyBuckets",
+                "s3:CreateJob",
+                "sts:GetCallerIdentity"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": "CDK STAGING BUCKET ARN"
+        }
+    ]
+}
